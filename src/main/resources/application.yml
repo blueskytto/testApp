@@ -1,0 +1,15 @@
+# Local Spring Boot Application
+server:
+  port: 8086
+
+# Log Settings
+logging:
+  level:
+#  org.springframework:
+#    security: debug
+#    boot: debug
+    com.nonghyupit: debug
+
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %line - %-0.-10000msg%n"
+    file: "%d %p %c{1.} [%t] %m%n"
