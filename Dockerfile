@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:11.0.16-jre-slim
 
 EXPOSE 8086
 
