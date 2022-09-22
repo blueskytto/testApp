@@ -14,7 +14,7 @@ spec:
    spec:                  
      containers:
      - name: test-app3
-       image: <DOCKERHUB_USER>/<APP_NAME>:latest
+       image: blueskytto/test-app:latest
        ports:
        - containerPort: 8086
 ---
