@@ -23,10 +23,10 @@ kind: Service
 metadata:
   name: test-app3
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: test-app3
   ports:
-    - port: 80
+    - port: 8086
       targetPort: 8086
-      nodePort: 30001
+      #nodePort: 30001
