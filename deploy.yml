@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app3
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: test-app3
+ template:
+   metadata:
+     labels:
+       app: test-app3
+   spec:                  
+     containers:
+     - name: test-app3
+       image: <DOCKERHUB_USER>/<APP_NAME>:latest
+       ports:
+       - containerPort: 8086
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-app3
+spec:
+  type: LoadBalancer
+  selector:
+    app: test-app3
+  ports:
+    - port: 80
+      targetPort: 8086
+      nodePort: 30001
