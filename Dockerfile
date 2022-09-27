@@ -1,4 +1,4 @@
-FROM openjdk:11.0.16-jre-slim
+FROM docker.io/openjdk:11.0.16-jre-slim
 
 EXPOSE 8086
 
