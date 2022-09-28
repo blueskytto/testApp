@@ -14,7 +14,7 @@ spec:
    spec:                  
      containers:
      - name: test-app3
-       image: core.harbor.domain/blueskytto/test-app:latest
+       image: core.harbor.domain/blueskytto/test-app@sha256:3b5f8aeda8c395517c9027d4776a106f439fc5424c7c2fa86f1a13775298ada6
        ports:
        - containerPort: 8086
 ---
