@@ -18,8 +18,8 @@ EXPOSE 8086
 
 COPY ./ ./
 #RUN gradle clean build --no-daemon
-RUN chmod -R 777 /home/gradle
+#RUN chmod -R 777 /home/gradle
 RUN ./gradlew build
 
-WORKDIR /home/gradle/build/libs
+WORKDIR ./build/libs
 ENTRYPOINT ["java", "-jar", "app3-0.0.1-SNAPSHOT.jar"]
