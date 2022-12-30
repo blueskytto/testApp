@@ -8,7 +8,7 @@
 
 
 #FROM docker.io/gradle:7.5.1-jdk11-alpine
-FROM docker.io/openjdk:19-alpine
+FROM docker.io/openjdk:11-slim
 
 EXPOSE 8086
 
