@@ -7,7 +7,8 @@
 #ENTRYPOINT ["java","-jar","app3-0.0.1-SNAPSHOT.jar"]
 
 
-FROM docker.io/gradle:7.5.1-jdk11-alpine
+#FROM docker.io/gradle:7.5.1-jdk11-alpine
+FROM docker.io/openjdk:19-alpine
 
 EXPOSE 8086
 
@@ -16,8 +17,9 @@ EXPOSE 8086
 #ENTRYPOINT ["java","-jar","app3-0.0.1-SNAPSHOT.jar"]
 
 COPY ./ ./
-RUN gradle clean build --no-daemon
+#RUN gradle clean build --no-daemon
+RUN chmod -R 777 /home/gradle
+RUN ./gradlew build
 
-RUN ls -al /home/gradle/build/libs
 WORKDIR /home/gradle/build/libs
 ENTRYPOINT ["java", "-jar", "app3-0.0.1-SNAPSHOT.jar"]
