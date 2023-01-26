@@ -1,2 +1,2 @@
 # testApp
-Hi
+CI/CD 용 테스트앱
